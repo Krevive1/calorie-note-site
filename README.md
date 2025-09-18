@@ -38,5 +38,5 @@
 
 ## 連絡先
 
-- プレス窓口: press@calorienote.app（予定）
-- 一般問い合わせ: support@calorienote.app（予定）
+- プレス窓口: qgsky21777@gmail.com
+- 一般問い合わせ: qgsky21777@gmail.com
