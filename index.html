@@ -41,6 +41,16 @@
         .newsletter input { padding: 15px; border: none; border-radius: 25px; flex: 1; min-width: 250px; }
         .newsletter button { padding: 15px 30px; background: #fff; color: #667eea; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; }
         
+        /* Social Media Section */
+        .social { padding: 60px 0; background: #f8f9fa; text-align: center; }
+        .social h2 { font-size: 2rem; margin-bottom: 30px; color: #333; }
+        .social-links { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+        .social-link { display: flex; align-items: center; gap: 10px; padding: 15px 25px; background: white; border-radius: 50px; text-decoration: none; color: #333; font-weight: 600; transition: transform 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .social-link:hover { transform: translateY(-2px); }
+        .social-link.twitter { color: #1da1f2; }
+        .social-link.instagram { color: #e4405f; }
+        .social-link.tiktok { color: #000; }
+        
         /* Footer */
         .footer { background: #333; color: white; padding: 40px 0; text-align: center; }
         .footer a { color: #667eea; text-decoration: none; }
@@ -50,6 +60,7 @@
             .hero p { font-size: 1.1rem; }
             .privacy-content { grid-template-columns: 1fr; }
             .newsletter-form { flex-direction: column; }
+            .social-links { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -121,6 +132,27 @@
                 <input type="hidden" name="fields[language]" value="ja">
                 <button type="submit">登録する</button>
             </form>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social">
+        <div class="container">
+            <h2>開発の様子をSNSで発信中</h2>
+            <div class="social-links">
+                <a href="https://x.com/tanakat69362741" target="_blank" class="social-link twitter">
+                    <span>🐦</span>
+                    <span>X (Twitter)</span>
+                </a>
+                <a href="https://instagram.com/calorie_note_dev" target="_blank" class="social-link instagram">
+                    <span>📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://tiktok.com/@calorie_note_dev" target="_blank" class="social-link tiktok">
+                    <span>🎵</span>
+                    <span>TikTok</span>
+                </a>
+            </div>
         </div>
     </section>
 
