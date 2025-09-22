@@ -1,170 +1,139 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Note - シンプル最速のカロリー記録</title>
-    <meta name="description" content="オフラインで安心、データは端末内保存。3タップで今日の食事を記録。多言語対応のプライバシー重視カロリー管理アプリ。">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Hero Section */
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
-        .hero p { font-size: 1.3rem; margin-bottom: 40px; opacity: 0.9; }
-        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .btn { display: inline-block; padding: 15px 30px; background: #fff; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: 600; transition: transform 0.3s; }
-        .btn:hover { transform: translateY(-2px); }
-        .btn-secondary { background: transparent; border: 2px solid #fff; color: #fff; }
-        
-        /* Features Section */
-        .features { padding: 80px 0; background: #f8f9fa; }
-        .features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: #333; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .feature { text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .feature h3 { font-size: 1.5rem; margin-bottom: 15px; color: #667eea; }
-        .feature p { color: #666; }
-        
-        /* Privacy Section */
-        .privacy { padding: 80px 0; background: white; }
-        .privacy-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .privacy h2 { font-size: 2.5rem; margin-bottom: 30px; color: #333; }
-        .privacy p { font-size: 1.1rem; color: #666; margin-bottom: 20px; }
-        
-        /* Newsletter Section */
-        .newsletter { background: #667eea; color: white; padding: 60px 0; text-align: center; }
-        .newsletter h2 { font-size: 2rem; margin-bottom: 20px; }
-        .newsletter p { margin-bottom: 30px; opacity: 0.9; }
-        .newsletter-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
-        .newsletter input { padding: 15px; border: none; border-radius: 25px; flex: 1; min-width: 250px; }
-        .newsletter button { padding: 15px 30px; background: #fff; color: #667eea; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; }
-        
-        /* Social Media Section */
-        .social { padding: 60px 0; background: #f8f9fa; text-align: center; }
-        .social h2 { font-size: 2rem; margin-bottom: 30px; color: #333; }
-        .social-links { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .social-link { display: flex; align-items: center; gap: 10px; padding: 15px 25px; background: white; border-radius: 50px; text-decoration: none; color: #333; font-weight: 600; transition: transform 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .social-link:hover { transform: translateY(-2px); }
-        .social-link.twitter { color: #1da1f2; }
-        .social-link.instagram { color: #e4405f; }
-        .social-link.tiktok { color: #000; }
-        
-        /* Footer */
-        .footer { background: #333; color: white; padding: 40px 0; text-align: center; }
-        .footer a { color: #667eea; text-decoration: none; }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-            .privacy-content { grid-template-columns: 1fr; }
-            .newsletter-form { flex-direction: column; }
-            .social-links { flex-direction: column; align-items: center; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calorie Note | カロリーノート 公式サイト</title>
+  <meta name="description" content="カロリーノートは、目標カロリーの自動計算と、食事・運動・体重の記録をシンプルに行える健康管理アプリです。日/週/月のグラフ、CSV共有、オフライン対応、多言語対応。">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calorie Note | カロリーノート">
+  <meta property="og:description" content="シンプル最速のカロリー記録アプリ。PFC管理、柔軟な日次目標、CSVエクスポート対応。">
+  <meta property="og:image" content="https://krevive1.github.io/calorie-note-site/og_image.png">
+  <meta property="og:url" content="https://krevive1.github.io/calorie-note-site/">
+  <meta name="theme-color" content="#25a9ff">
+  <style>
+    :root {
+      --bg1:#4FC3F7; --bg2:#E3F2FD; --ink:#0f172a; --muted:#64748b; --brand:#25a9ff;
+      --card:#ffffff; --ring:rgba(37,169,255,.25);
+    }
+    * { box-sizing: border-box; }
+    html,body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 8px 0; color: #fff; font-weight: 600;
+    }
+    .logo { display:flex; align-items:center; gap:10px; }
+    .logo-circle { width:28px; height:28px; border-radius:50%; background:#fff; color:#25a9ff; display:grid; place-items:center; font-weight:800; }
+    .hero {
+      margin-top: 12px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 12px 30px -12px var(--ring);
+    }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(24px,4.5vw,32px); }
+    .hero p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .store-links { margin-top: 16px; display:flex; gap: 12px; flex-wrap: wrap; }
+    .badge-btn { display:inline-block; border-radius: 10px; overflow: hidden; background: #000; }
+    .badge-btn img { display:block; height: 44px; }
+    .badge-btn.play img { height: 64px; }
+    .card {
+      margin-top: 16px; background: var(--card); border-radius: 16px; padding: 20px;
+      box-shadow: 0 12px 30px -12px var(--ring);
+    }
+    .grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+    .feat { background:#f8fafc; border-radius:12px; padding:14px; }
+    .feat h3 { margin:0 0 6px; font-size:16px; }
+    .feat p  { margin:0; color:var(--muted); font-size:14px; line-height:1.6; }
+    .links { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600;
+      color:#fff; background: var(--brand);
+    }
+    .btn.ghost { background:#eef6ff; color:#0b6bd9; }
+    footer { color:#fff; opacity:.9; font-size: 12px; text-align:center; padding: 24px 0 8px; }
+    footer a { color:#fff; }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Calorie Note</h1>
-            <p>オフラインで安心、シンプル最速のカロリー記録</p>
-            <div class="cta-buttons">
-                <a href="#waitlist" class="btn">事前登録する</a>
-                <a href="#features" class="btn btn-secondary">機能を見る</a>
-            </div>
-        </div>
-    </section>
+  <div class="container">
+    <header class="nav" aria-label="Top Navigation">
+      <div class="logo">
+        <span class="logo-circle">C</span>
+        <span>Calorie Note</span>
+      </div>
+      <nav class="links">
+        <a class="btn ghost" href="PRESS_RELEASE.html" target="_blank" rel="noopener">プレスリリース</a>
+        <a class="btn ghost" href="https://krevive1.github.io/calorienote-privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+      </nav>
+    </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>主な機能</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h3>⚡ 入力最速</h3>
-                    <p>3タップで今日の食事を記録。シンプルな操作で続けやすい設計です。</p>
-                </div>
-                <div class="feature">
-                    <h3>🔒 プライバシー重視</h3>
-                    <p>データは端末内に保存。外部サーバーに送信されません。</p>
-                </div>
-                <div class="feature">
-                    <h3>�� グラフ表示</h3>
-                    <p>摂取カロリー・消費カロリー・体重の変化を可視化。</p>
-                </div>
-                <div class="feature">
-                    <h3>�� 多言語対応</h3>
-                    <p>日本語・英語・中国語・韓国語に対応。海外の方にも使いやすく。</p>
-                </div>
-            </div>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <h1 id="title">カロリーノート − かんたん最速のカロリー管理</h1>
+        <p>
+          目標カロリーの自動計算と、食事・運動・体重の記録をシンプルに。日/週/月グラフ、PFCバランス、柔軟な日次目標、CSVエクスポート、オフライン、多言語（日本語/英語/中国語/韓国語）対応。
+        </p>
+        <div class="store-links" aria-label="Store Links">
+          <!-- App Store -->
+          <a class="badge-btn" href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener" aria-label="App Storeで入手">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+          </a>
+          <!-- Google Play -->
+          <a class="badge-btn play" href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れよう">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+          </a>
         </div>
-    </section>
+      </section>
 
-    <!-- Privacy Section -->
-    <section class="privacy">
-        <div class="container">
-            <div class="privacy-content">
-                <div>
-                    <h2>なぜプライバシーが重要なのか</h2>
-                    <p>カロリー記録は個人の健康データ。外部に送信される心配なく、安心して記録を続けられます。</p>
-                    <p>オフラインでも完全に動作するため、ネット環境に依存しません。</p>
-                </div>
-                <div>
-                    <h2>データの安全性</h2>
-                    <p>• 端末内のみに保存</p>
-                    <p>• 外部サーバーへの送信なし</p>
-                    <p>• オフライン完全動作</p>
-                    <p>• バックアップ機能付き</p>
-                </div>
-            </div>
+      <section class="card" aria-labelledby="features">
+        <h2 id="features" style="margin:0 0 8px;">主な機能</h2>
+        <div class="grid">
+          <div class="feat">
+            <h3>自動計算 & 柔軟な日次目標</h3>
+            <p>基本情報から推奨カロリーを算出。曜日別/タグ/テンプレで柔軟に切替。</p>
+          </div>
+          <div class="feat">
+            <h3>PFCバランス管理</h3>
+            <p>タンパク質・脂質・炭水化物の進捗可視化。推奨比率は P30% / F20% / C50%。</p>
+          </div>
+          <div class="feat">
+            <h3>記録と共有</h3>
+            <p>食事・運動・体重をサクッと入力。CSV書き出し・共有に対応。</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Newsletter Section -->
-    <section id="waitlist" class="newsletter">
-        <div class="container">
-            <h2>リリース情報をお届け</h2>
-            <p>アプリの最新情報や機能アップデートをお知らせします</p>
-            <form class="newsletter-form" action="https://connect.mailerlite.com/api/subscribers" method="POST" target="_blank">
-                <input type="email" name="email" placeholder="メールアドレス" required>
-                <input type="hidden" name="fields[language]" value="ja">
-                <button type="submit">登録する</button>
-            </form>
+      <section class="card" aria-labelledby="more">
+        <h2 id="more" style="margin:0 0 8px;">リンク</h2>
+        <div class="links">
+          <a class="btn" href="PRESS_RELEASE.html" target="_blank" rel="noopener">プレスリリース</a>
+          <a class="btn" href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener">App Store</a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn ghost" href="https://x.com/tanakat69362741" target="_blank" rel="noopener">X（旧Twitter）</a>
+          <a class="btn ghost" href="mailto:qgsky21777@gmail.com">お問い合わせ</a>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Social Media Section -->
-    <section class="social">
-        <div class="container">
-            <h2>開発の様子をSNSで発信中</h2>
-            <div class="social-links">
-                <a href="https://x.com/tanakat69362741" target="_blank" class="social-link twitter">
-                    <span>🐦</span>
-                    <span>X (Twitter)</span>
-                </a>
-                <a href="https://instagram.com/calorie_note_dev" target="_blank" class="social-link instagram">
-                    <span>📷</span>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://tiktok.com/@calorie_note_dev" target="_blank" class="social-link tiktok">
-                    <span>🎵</span>
-                    <span>TikTok</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Calorie Note. 
-            <a href="https://krevive1.github.io/calorienote-privacy/" target="_blank">プライバシーポリシー</a> | 
-            <a href="mailto:qgsky21777@gmail.com">お問い合わせ</a> | 
-            <a href="https://krevive1.github.io/calorie-note-site/PRESS_RELEASE.html" target="_blank">プレスリリース</a>
-            </p>
-        </div>
+    <footer>
+      <p style="margin:6px 0;">
+        © 2025 Calorie Note / <a href="https://krevive1.github.io/calorienote-privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+      </p>
+      <p style="margin:6px 0; opacity:.8;">
+        iOS版: <a href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener">App Store</a> /
+        Android版: <a href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener">Google Play</a>
+      </p>
     </footer>
+  </div>
 </body>
 </html>
