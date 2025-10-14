@@ -122,19 +122,24 @@
             left: 0;
         }
 
-        .watch-placeholder {
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            border-radius: 22px;
-            background: rgba(255,255,255,0.7);
-            border: 2px dashed rgba(68,83,167,0.25);
+        .watch-images {
             display: flex;
-            align-items: center;
+            gap: 20px;
             justify-content: center;
-            color: rgba(68,83,167,0.65);
-            font-size: 1rem;
-            text-align: center;
-            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .watch-image {
+            max-width: 240px;
+            flex: 1 1 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .watch-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 14px 32px rgba(68,83,167,0.25);
         }
 
         .release-notes {
@@ -161,9 +166,6 @@
 
         .release-actions {
             margin-top: 24px;
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
         }
 
         .release-actions a {
@@ -262,7 +264,7 @@
             .header h1 { font-size: 2.2rem; }
             .main-content { padding: 26px; margin: 24px 0; }
             .watch-section { padding: 28px; }
-            .release-actions { justify-content: center; }
+            .watch-images { gap: 14px; }
         }
     </style>
 </head>
@@ -315,7 +317,7 @@
                         <h3>アップデートチェック</h3>
                         <p>アプリ起動時に最新バージョンを確認し、ストアへ誘導。いつでも最新機能を使えます。</p>
                     </div>
-                    <div class="feature">
+                    <divの feature">
                         <div class="feature-icon">🛡️</div>
                         <h3>データの安心運用</h3>
                         <p>ローカル保存＋手動エクスポートで安心。ログ出力も抑制し、プライバシーに配慮しています。</p>
@@ -334,8 +336,13 @@
                             <li>WatchConnectivity によるリアルタイム同期でデータのズレを防止</li>
                         </ul>
                     </div>
-                    <div class="watch-placeholder">
-                        watchOS スクリーンショットをここへ配置（396×484 / 352×430 推奨）
+                    <div class="watch-images">
+                        <div class="watch-image">
+                            <img src="app_store_assets/watchos_screenshots/watch_series9_01.png" alt="Calorie Note watchOS メイン画面のスクリーンショット">
+                        </div>
+                        <div class="watch-image">
+                            <img src="app_store_assets/watchos_screenshots/watch_series9_02.png" alt="Calorie Note watchOS コンプリケーションのスクリーンショット">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -347,8 +354,10 @@
                 <div class="release-note-item">WatchConnectivity の同期処理とスナップショット保存を安定化。</div>
 
                 <div class="release-actions">
-                    <a href="https://github.com/krevive1/calorie_note/blob/main/RELEASE_NOTES.md" target="_blank" rel="noopener">詳細なリリースノートを読む</a>
-                    <a href="https://krevive1.github.io/calorie-note-updates/version/latest-version.json" target="_blank" rel="noopener">最新バージョン JSON</a>
+                    <a href="https://krevive1.github.io/calorie-note-updates/version/latest-version.json"
+                       target="_blank" rel="noopener">
+                       最新バージョン JSON
+                    </a>
                 </div>
             </section>
 
@@ -385,7 +394,7 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2024–2025 Calorie Note. All rights reserved.</p>
+            <p>&copy; 2024–2025 Calorie Note. All rights reserved。</p>
         </footer>
     </div>
 </body>
