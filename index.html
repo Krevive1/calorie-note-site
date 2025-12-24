@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Note - 手のひらと手首で完結するカロリー管理アプリ</title>
-    <meta name="description" content="Calorie Note は、食事・運動記録、PFC バランス管理、柔軟な目標設定、そして Apple Watch 連携で残り摂取カロリーを手首で確認できるヘルスケアアプリです。">
-    <meta name="keywords" content="カロリー計算, ダイエット, 体重管理, 食事記録, Apple Watch, カロリー管理アプリ">
+    <title>コンビニ筋トレ飯｜Calorie Note - 増量/減量「買う物3つ」</title>
+    <meta name="description" content="筋トレ初心者のためのコンビニ飯テンプレ。増量/減量の「買う物3つ」をセブン→ファミマ→ローソンで毎日更新。Calorie Note で秒速記録（iOS/Android）。">
+    <meta name="keywords" content="コンビニ飯,筋トレ初心者,増量,減量,PFC,カロリー計算,食事記録,体重管理,カロリー管理アプリ,セブン,ファミマ,ローソン">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -30,6 +30,7 @@
             gap: 12px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .hero-badge {
@@ -42,7 +43,7 @@
 
         .header h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; margin-bottom: 18px; }
 
-        .header p { font-size: 1.15rem; opacity: 0.92; max-width: 640px; margin: 0 auto 40px; }
+        .header p { font-size: 1.15rem; opacity: 0.92; max-width: 760px; margin: 0 auto 40px; }
 
         .main-content {
             background: white;
@@ -67,12 +68,133 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 36px;
+            margin-bottom: 22px;
             font-size: 1.9rem;
             font-weight: 700;
             color: #4453a7;
         }
 
+        .section-subtitle {
+            text-align: center;
+            color: #5f6679;
+            margin: 0 auto 28px;
+            max-width: 820px;
+            font-size: 1.02rem;
+            line-height: 1.75;
+        }
+
+        /* ===== New: convenience templates ===== */
+        .template-section {
+            background: linear-gradient(140deg, rgba(68,83,167,0.10) 0%, rgba(118,75,162,0.12) 100%);
+            border-radius: 18px;
+            padding: 38px;
+            margin-bottom: 60px;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-top: 18px;
+        }
+
+        .template-card {
+            background: rgba(255,255,255,0.9);
+            border-radius: 16px;
+            padding: 26px;
+            box-shadow: 0 14px 28px rgba(68,83,167,0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px rgba(68,83,167,0.14);
+        }
+
+        .template-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .template-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4453a7;
+            background: rgba(68,83,167,0.12);
+        }
+
+        .template-list {
+            list-style: none;
+            margin-top: 12px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .template-list li {
+            margin-bottom: 10px;
+            padding-left: 26px;
+            position: relative;
+        }
+
+        .template-list li::before {
+            content: "✓";
+            color: #4453a7;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .template-note {
+            margin-top: 18px;
+            color: #5f6679;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .template-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .mini-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            text-decoration: none;
+            border: 1px solid rgba(68,83,167,0.55);
+            color: #4453a7;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .mini-action:hover {
+            background: #4453a7;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ===== existing ===== */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -265,6 +387,7 @@
             .main-content { padding: 26px; margin: 24px 0; }
             .watch-section { padding: 28px; }
             .watch-images { gap: 14px; }
+            .template-section { padding: 26px; }
         }
     </style>
 </head>
@@ -272,11 +395,16 @@
     <div class="container">
         <header class="header">
             <div class="hero-badges">
-                <span class="hero-badge">iOS / Android / Apple Watch 対応</span>
-                <span class="hero-badge">PFCバランス × 残カロリー管理</span>
+                <span class="hero-badge">筋トレ初心者向け</span>
+                <span class="hero-badge">増量 / 減量「買う物3つ」</span>
+                <span class="hero-badge">セブン → ファミマ → ローソン</span>
+                <span class="hero-badge">iOS / Android</span>
             </div>
-            <h1>Calorie Note</h1>
-            <p>毎日の食事・運動・体重・残カロリーをワンストップで管理。柔軟な目標設定とリアルタイム同期で、健康的なライフスタイルをサポートします。</p>
+            <h1>コンビニ筋トレ飯｜Calorie Note</h1>
+            <p>
+                コンビニで「何を買えばいいか」迷う人へ。<b>増量/減量のテンプレ（買う物3つ）</b>を毎日更新。<br>
+                気に入ったセットは、Calorie Note で<b>秒速記録</b>して継続しよう。
+            </p>
         </header>
 
         <main class="main-content">
@@ -289,9 +417,72 @@
                 </a>
             </div>
 
+            <!-- New: Convenience templates section -->
+            <section class="template-section" aria-labelledby="templates">
+                <h2 id="templates" class="section-title">コンビニ飯テンプレ（保存用）</h2>
+                <p class="section-subtitle">
+                    まずは<b>「主食＋高たんぱく＋プラス1」</b>（増量）か、<b>「かさ増し＋高たんぱく＋汁物」</b>（減量）だけ覚えればOK。<br>
+                    ※商品は日々変わるので、栄養成分表示で<b>目安</b>として調整してください。
+                </p>
+
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-head">
+                            <div class="template-title">増量テンプレ</div>
+                            <span class="pill">🏋️‍♂️ 増量</span>
+                        </div>
+                        <ul class="template-list">
+                            <li><b>主食</b>（おにぎり / パン / 麺）</li>
+                            <li><b>高たんぱく</b>（サラダチキン / ゆで卵 / ヨーグルト等）</li>
+                            <li><b>プラス1</b>（乳製品 / スープ / 果物などで調整）</li>
+                        </ul>
+                    </div>
+
+                    <div class="template-card">
+                        <div class="template-head">
+                            <div class="template-title">減量テンプレ</div>
+                            <span class="pill">🔥 減量</span>
+                        </div>
+                        <ul class="template-list">
+                            <li><b>かさ増し</b>（サラダ / 野菜 / 海藻）</li>
+                            <li><b>高たんぱく</b>（鶏・魚・卵・大豆系）</li>
+                            <li><b>汁物</b>（味噌汁 / スープで満足感UP）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="template-note">
+                    投稿は「セブン → ファミマ → ローソン」の順で更新中。動画のコメントで <b>「増量」</b> / <b>「減量」</b> と送ってくれたら別パターンも作ります。
+                </p>
+
+                <div class="template-actions" aria-label="ショートカット">
+                    <a class="mini-action" href="#features">アプリでできること</a>
+                    <a class="mini-action" href="#release">最新アップデート</a>
+                </div>
+
+                <!-- ここにストアリンクをもう一回置く（迷わせない） -->
+                <div class="store-links" aria-label="アプリストアリンク（ショートカット）" style="margin: 22px 0 0;">
+                    <a class="badge-btn" href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener" aria-label="App Storeで入手（ショートカット）">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                    <a class="badge-btn play" href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れよう（ショートカット）">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                    </a>
+                </div>
+            </section>
+
             <section aria-labelledby="features">
-                <h2 id="features" class="section-title">主な機能</h2>
+                <h2 id="features" class="section-title">アプリでできること</h2>
+                <p class="section-subtitle">
+                    「テンプレで決める」→「アプリで秒速記録」→「続ける」。まずは<b>入力の手間を減らす</b>ことにフォーカスしています。
+                </p>
+
                 <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🛒</div>
+                        <h3>テンプレで迷わない</h3>
+                        <p>増量/減量の「買う物3つ」ルールで、コンビニでも選択がブレにくい。お気に入り化して繰り返し使えます。</p>
+                    </div>
                     <div class="feature">
                         <div class="feature-icon">🍽️</div>
                         <h3>食事・PFC記録</h3>
@@ -299,8 +490,8 @@
                     </div>
                     <div class="feature">
                         <div class="feature-icon">⚖️</div>
-                        <h3>体重・目標管理</h3>
-                        <p>曜日別・タグ別に柔軟なカロリー目標を設定。目標体重達成時には祝福演出でモチベーションをキープ。</p>
+                        <h3>目標（増量/減量）に合わせて調整</h3>
+                        <p>日ごとのカロリー目標を柔軟に設定。増量/減量のフェーズ切り替えもしやすく、継続のハードルを下げます。</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">📊</div>
@@ -313,11 +504,6 @@
                         <p>消費カロリーを食事データと統合。残り摂取可能カロリーが負値になった場合は目立つ警告でお知らせします。</p>
                     </div>
                     <div class="feature">
-                        <div class="feature-icon">🔔</div>
-                        <h3>アップデートチェック</h3>
-                        <p>アプリ起動時に最新バージョンを確認し、ストアへ誘導。いつでも最新機能を使えます。</p>
-                    </div>
-                    <div class="feature">
                         <div class="feature-icon">🛡️</div>
                         <h3>データの安心運用</h3>
                         <p>ローカル保存＋手動エクスポートで安心。ログ出力も抑制し、プライバシーに配慮しています。</p>
@@ -328,7 +514,7 @@
             <section class="watch-section" aria-labelledby="watch">
                 <div class="watch-grid">
                     <div class="watch-text">
-                        <h3 id="watch">Apple Watch で残カロリーを手首チェック</h3>
+                        <h3 id="watch">Apple Watch で残カロリーを手首チェック（＋α）</h3>
                         <p>watchOS コンパニオンアプリとコンプリケーションを組み合わせれば、iPhone を取り出さずに最新のカロリー状況を確認できます。</p>
                         <ul>
                             <li>摂取・目標・消費・残り摂取可能カロリーをウォッチフェイスに表示</li>
@@ -362,8 +548,8 @@
             </section>
 
             <section class="social-section">
-                <h2 class="section-title">最新情報をフォロー</h2>
-                <p>開発中の新機能やアップデート予定を SNS で発信しています。フォローして最新情報をチェック！</p>
+                <h2 class="section-title">コンビニ飯テンプレを毎日更新</h2>
+                <p>セブン→ファミマ→ローソンの順で、増量/減量の「買う物3つ」を投稿しています。フォローして保存用にどうぞ！</p>
                 <div class="social-links">
                     <a href="https://twitter.com/tanakat69362741" target="_blank" rel="noopener" class="social-link twitter" aria-label="X（Twitter）をフォロー">
                         🐦 <span>X（Twitter）</span>
