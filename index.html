@@ -1,587 +1,663 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コンビニ筋トレ飯｜Calorie Note - 増量/減量「買う物3つ」</title>
-    <meta name="description" content="筋トレ初心者のためのコンビニ飯テンプレ。増量/減量の「買う物3つ」をセブン→ファミマ→ローソンで毎日更新。Calorie Note で秒速記録（iOS/Android）。">
-    <meta name="keywords" content="コンビニ飯,筋トレ初心者,増量,減量,PFC,カロリー計算,食事記録,体重管理,カロリー管理アプリ,セブン,ファミマ,ローソン">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #5b8df9 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
+  <title>コンビニ筋トレ飯｜Calorie Note - 増量/減量「買う物3つ」</title>
+  <meta name="description" content="筋トレ初心者のためのコンビニ飯テンプレ。増量/減量の「買う物3つ」をセブン→ファミマ→ローソンで毎日更新。Calorie Noteで秒速記録（iOS/Android）。" />
+  <meta name="keywords" content="コンビニ飯,筋トレ初心者,増量,減量,PFC,カロリー計算,食事記録,体重管理,カロリー管理アプリ,セブン,ファミマ,ローソン" />
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .header {
-            text-align: center;
-            color: white;
-            padding: 70px 0 60px;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #5b8df9 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
 
-        .hero-badges {
-            display: inline-flex;
-            gap: 12px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-        .hero-badge {
-            background: rgba(255,255,255,0.18);
-            border-radius: 999px;
-            padding: 8px 18px;
-            font-size: 0.9rem;
-            letter-spacing: 0.02em;
-        }
+    .header {
+      text-align: center;
+      color: white;
+      padding: 70px 0 60px;
+    }
 
-        .header h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; margin-bottom: 18px; }
+    .hero-badges {
+      display: inline-flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        .header p { font-size: 1.15rem; opacity: 0.92; max-width: 760px; margin: 0 auto 40px; }
+    .hero-badge {
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
 
-        .main-content {
-            background: white;
-            border-radius: 20px;
-            padding: clamp(30px, 5vw, 60px);
-            box-shadow: 0 20px 50px rgba(18, 53, 109, 0.18);
-            margin: 40px 0;
-        }
+    .header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
 
-        .store-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin: 24px 0 48px;
-            flex-wrap: wrap;
-        }
+    .header p {
+      font-size: 1.15rem;
+      opacity: 0.92;
+      max-width: 780px;
+      margin: 0 auto 40px;
+    }
 
-        .badge-btn { display: inline-block; transition: transform 0.3s ease; }
-        .badge-btn:hover { transform: translateY(-4px); }
-        .badge-btn img { height: 60px; width: auto; }
-        .badge-btn.play img { height: 80px; }
+    .main-content {
+      background: white;
+      border-radius: 20px;
+      padding: clamp(30px, 5vw, 60px);
+      box-shadow: 0 20px 50px rgba(18, 53, 109, 0.18);
+      margin: 40px 0;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 22px;
-            font-size: 1.9rem;
-            font-weight: 700;
-            color: #4453a7;
-        }
+    .store-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 24px 0 48px;
+      flex-wrap: wrap;
+    }
 
-        .section-subtitle {
-            text-align: center;
-            color: #5f6679;
-            margin: 0 auto 28px;
-            max-width: 820px;
-            font-size: 1.02rem;
-            line-height: 1.75;
-        }
+    .badge-btn { display: inline-block; transition: transform 0.3s ease; }
+    .badge-btn:hover { transform: translateY(-4px); }
+    .badge-btn img { height: 60px; width: auto; }
+    .badge-btn.play img { height: 80px; }
 
-        /* ===== New: convenience templates ===== */
-        .template-section {
-            background: linear-gradient(140deg, rgba(68,83,167,0.10) 0%, rgba(118,75,162,0.12) 100%);
-            border-radius: 18px;
-            padding: 38px;
-            margin-bottom: 60px;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 22px;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #4453a7;
+    }
 
-        .template-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
-            margin-top: 18px;
-        }
+    .section-subtitle {
+      text-align: center;
+      color: #5f6679;
+      margin: 0 auto 28px;
+      max-width: 820px;
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
 
-        .template-card {
-            background: rgba(255,255,255,0.9);
-            border-radius: 16px;
-            padding: 26px;
-            box-shadow: 0 14px 28px rgba(68,83,167,0.10);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    /* ===== Templates ===== */
+    .template-section {
+      background: linear-gradient(140deg, rgba(68,83,167,0.10) 0%, rgba(118,75,162,0.12) 100%);
+      border-radius: 18px;
+      padding: 38px;
+      margin-bottom: 60px;
+    }
 
-        .template-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 36px rgba(68,83,167,0.14);
-        }
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 18px;
+    }
 
-        .template-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
+    .template-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 14px 28px rgba(68,83,167,0.10);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .template-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #333;
-        }
+    .template-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(68,83,167,0.14);
+    }
 
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 14px;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #4453a7;
-            background: rgba(68,83,167,0.12);
-        }
+    .template-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
 
-        .template-list {
-            list-style: none;
-            margin-top: 12px;
-            color: #444;
-            line-height: 1.8;
-        }
+    .template-title { font-size: 1.2rem; font-weight: 700; color: #333; }
 
-        .template-list li {
-            margin-bottom: 10px;
-            padding-left: 26px;
-            position: relative;
-        }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4453a7;
+      background: rgba(68,83,167,0.12);
+      white-space: nowrap;
+    }
 
-        .template-list li::before {
-            content: "✓";
-            color: #4453a7;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+    .template-list {
+      list-style: none;
+      margin-top: 12px;
+      color: #444;
+      line-height: 1.8;
+    }
 
-        .template-note {
-            margin-top: 18px;
-            color: #5f6679;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            text-align: center;
-        }
+    .template-list li {
+      margin-bottom: 10px;
+      padding-left: 26px;
+      position: relative;
+    }
 
-        .template-actions {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 18px;
-        }
+    .template-list li::before {
+      content: "✓";
+      color: #4453a7;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
 
-        .mini-action {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 16px;
-            border-radius: 999px;
-            text-decoration: none;
-            border: 1px solid rgba(68,83,167,0.55);
-            color: #4453a7;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            background: white;
-        }
+    .template-note {
+      margin-top: 18px;
+      color: #5f6679;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: center;
+    }
 
-        .mini-action:hover {
-            background: #4453a7;
-            color: white;
-            transform: translateY(-2px);
-        }
+    .template-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
 
-        /* ===== existing ===== */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-            margin-bottom: 60px;
-        }
+    .mini-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(68,83,167,0.55);
+      color: #4453a7;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      background: white;
+    }
 
-        .feature {
-            text-align: center;
-            padding: 30px;
-            border-radius: 18px;
-            background: #f6f7fb;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .mini-action:hover {
+      background: #4453a7;
+      color: white;
+      transform: translateY(-2px);
+    }
 
-        .feature:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 30px rgba(68, 83, 167, 0.12);
-        }
+    /* ===== Features ===== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
 
-        .feature-icon { font-size: 2.6rem; margin-bottom: 14px; }
-        .feature h3 { color: #4453a7; margin-bottom: 12px; font-size: 1.2rem; }
-        .feature p { color: #5f6679; line-height: 1.6; font-size: 0.97rem; }
+    .feature {
+      text-align: center;
+      padding: 30px;
+      border-radius: 18px;
+      background: #f6f7fb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .watch-section {
-            background: linear-gradient(140deg, rgba(68,83,167,0.12) 0%, rgba(118,75,162,0.15) 100%);
-            border-radius: 18px;
-            padding: 40px;
-            margin-bottom: 60px;
-        }
+    .feature:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(68, 83, 167, 0.12);
+    }
 
-        .watch-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-            align-items: center;
-        }
+    .feature-icon { font-size: 2.6rem; margin-bottom: 14px; }
+    .feature h3 { color: #4453a7; margin-bottom: 12px; font-size: 1.2rem; }
+    .feature p { color: #5f6679; line-height: 1.6; font-size: 0.97rem; }
 
-        .watch-text h3 { color: #333; margin-bottom: 16px; font-size: 1.4rem; }
-        .watch-text ul { list-style: none; color: #444; line-height: 1.7; }
-        .watch-text ul li { margin-bottom: 10px; padding-left: 26px; position: relative; }
-        .watch-text ul li::before {
-            content: "✓";
-            color: #4453a7;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+    /* ===== Watch ===== */
+    .watch-section {
+      background: linear-gradient(140deg, rgba(68,83,167,0.12) 0%, rgba(118,75,162,0.15) 100%);
+      border-radius: 18px;
+      padding: 40px;
+      margin-bottom: 60px;
+    }
 
-        .watch-images {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .watch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      align-items: center;
+    }
 
-        .watch-image {
-            max-width: 240px;
-            flex: 1 1 200px;
-            display: flex;
-            justify-content: center;
-        }
+    .watch-text h3 { color: #333; margin-bottom: 16px; font-size: 1.4rem; }
+    .watch-text p { color: #444; margin-bottom: 10px; }
+    .watch-text ul { list-style: none; color: #444; line-height: 1.7; }
+    .watch-text ul li { margin-bottom: 10px; padding-left: 26px; position: relative; }
+    .watch-text ul li::before {
+      content: "✓";
+      color: #4453a7;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
 
-        .watch-image img {
-            width: 100%;
-            border-radius: 24px;
-            box-shadow: 0 14px 32px rgba(68,83,167,0.25);
-        }
+    .watch-images {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        .release-notes {
-            background: #f8f9fa;
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 60px;
-        }
+    .watch-image {
+      max-width: 240px;
+      flex: 1 1 200px;
+      display: flex;
+      justify-content: center;
+    }
 
-        .release-note-item {
-            margin-bottom: 16px;
-            padding-left: 20px;
-            position: relative;
-            color: #51586d;
-        }
+    .watch-image img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 14px 32px rgba(68,83,167,0.25);
+    }
 
-        .release-note-item::before {
-            content: "•";
-            color: #4453a7;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+    /* ===== Release ===== */
+    .release-notes {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 60px;
+    }
 
-        .release-actions {
-            margin-top: 24px;
-        }
+    .release-note-item {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      position: relative;
+      color: #51586d;
+    }
 
-        .release-actions a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            text-decoration: none;
-            border: 1px solid #4453a7;
-            color: #4453a7;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            background: white;
-        }
+    .release-note-item::before {
+      content: "•";
+      color: #4453a7;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
 
-        .release-actions a:hover {
-            background: #4453a7;
-            color: white;
-            transform: translateY(-2px);
-        }
+    .release-actions { margin-top: 24px; }
 
-        .social-section {
-            background: #f0f4ff;
-            border-radius: 15px;
-            padding: 36px;
-            margin-bottom: 60px;
-            text-align: center;
-        }
+    .release-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid #4453a7;
+      color: #4453a7;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background: white;
+    }
 
-        .social-section p { color: #5f6679; margin-bottom: 24px; }
+    .release-actions a:hover {
+      background: #4453a7;
+      color: white;
+      transform: translateY(-2px);
+    }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    /* ===== Social ===== */
+    .social-section {
+      background: #f0f4ff;
+      border-radius: 15px;
+      padding: 36px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
 
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 22px;
-            background: white;
-            border-radius: 999px;
-            text-decoration: none;
-            color: #333;
-            box-shadow: 0 10px 26px rgba(68,83,167,0.12);
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
+    .social-section p { color: #5f6679; margin-bottom: 24px; }
 
-        .social-link:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(68,83,167,0.18); }
-        .social-link.twitter { border-left: 4px solid #1DA1F2; padding-left: 26px; }
-        .social-link.instagram { border-left: 4px solid #E4405F; padding-left: 26px; }
-        .social-link.tiktok { border-left: 4px solid #000000; padding-left: 26px; }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        .links-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 22px;
-            margin-bottom: 60px;
-        }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      background: white;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 10px 26px rgba(68,83,167,0.12);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
 
-        .link-card {
-            background: white;
-            padding: 26px;
-            border-radius: 14px;
-            box-shadow: 0 14px 28px rgba(68,83,167,0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .social-link:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(68,83,167,0.18); }
+    .social-link.twitter { border-left: 4px solid #1DA1F2; padding-left: 26px; }
+    .social-link.instagram { border-left: 4px solid #E4405F; padding-left: 26px; }
+    .social-link.tiktok { border-left: 4px solid #000000; padding-left: 26px; }
 
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 36px rgba(68,83,167,0.15);
-        }
+    /* ===== Links ===== */
+    .links-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      margin-bottom: 60px;
+    }
 
-        .link-card h3 { margin-bottom: 12px; color: #4453a7; }
-        .link-card a {
-            color: #4453a7;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .link-card {
+      background: white;
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 14px 28px rgba(68,83,167,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .footer {
-            text-align: center;
-            color: white;
-            padding: 40px 0;
-            opacity: 0.85;
-        }
+    .link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(68,83,167,0.15);
+    }
 
-        @media (max-width: 768px) {
-            .header { padding: 50px 0 40px; }
-            .header h1 { font-size: 2.2rem; }
-            .main-content { padding: 26px; margin: 24px 0; }
-            .watch-section { padding: 28px; }
-            .watch-images { gap: 14px; }
-            .template-section { padding: 26px; }
-        }
-    </style>
+    .link-card h3 { margin-bottom: 12px; color: #4453a7; }
+    .link-card a { color: #4453a7; text-decoration: none; font-weight: 500; }
+
+    .footer { text-align: center; color: white; padding: 40px 0; opacity: 0.85; }
+
+    @media (max-width: 768px) {
+      .header { padding: 50px 0 40px; }
+      .header p { font-size: 1.05rem; }
+      .main-content { padding: 26px; margin: 24px 0; }
+      .watch-section { padding: 28px; }
+      .watch-images { gap: 14px; }
+      .template-section { padding: 26px; }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="hero-badges">
-                <span class="hero-badge">筋トレ初心者向け</span>
-                <span class="hero-badge">増量 / 減量「買う物3つ」</span>
-                <span class="hero-badge">セブン → ファミマ → ローソン</span>
-                <span class="hero-badge">iOS / Android</span>
+  <div class="container">
+    <header class="header">
+      <div class="hero-badges">
+        <span class="hero-badge">筋トレ初心者向け</span>
+        <span class="hero-badge">増量 / 減量「買う物3つ」</span>
+        <span class="hero-badge">セブン → ファミマ → ローソン</span>
+        <span class="hero-badge">iOS / Android</span>
+      </div>
+
+      <h1>コンビニ筋トレ飯｜Calorie Note</h1>
+
+      <p>
+        コンビニで「何を買えばいいか」迷う人へ。<b>増量/減量のテンプレ（買う物3つ）</b>を毎日更新。<br />
+        気に入ったセットは、Calorie Note で<b>秒速記録</b>して継続しよう。
+      </p>
+    </header>
+
+    <main class="main-content">
+      <!-- Store buttons (top) -->
+      <div class="store-links" aria-label="アプリストアリンク">
+        <a class="badge-btn"
+           href="https://apps.apple.com/app/calorie-note-ver2/id6751843157"
+           target="_blank" rel="noopener"
+           aria-label="App Storeで入手">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
+
+        <a class="badge-btn play"
+           href="https://play.google.com/store/apps/details?id=com.calorienote.app"
+           target="_blank" rel="noopener"
+           aria-label="Google Playで手に入れよう">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+        </a>
+      </div>
+
+      <!-- Templates section -->
+      <section class="template-section" aria-labelledby="templates">
+        <h2 id="templates" class="section-title">コンビニ飯テンプレ（保存用）</h2>
+
+        <p class="section-subtitle">
+          まずは<b>「主食＋高たんぱく＋プラス1」</b>（増量）か、<b>「かさ増し＋高たんぱく＋汁物」</b>（減量）だけ覚えればOK。<br />
+          ※商品は日々変わるので、栄養成分表示で<b>目安</b>として調整してください。
+        </p>
+
+        <div class="template-grid">
+          <div class="template-card">
+            <div class="template-head">
+              <div class="template-title">増量テンプレ</div>
+              <span class="pill">🏋️‍♂️ 増量</span>
             </div>
-            <h1>コンビニ筋トレ飯｜Calorie Note</h1>
-            <p>
-                コンビニで「何を買えばいいか」迷う人へ。<b>増量/減量のテンプレ（買う物3つ）</b>を毎日更新。<br>
-                気に入ったセットは、Calorie Note で<b>秒速記録</b>して継続しよう。
+            <ul class="template-list">
+              <li><b>主食</b>（おにぎり / パン / 麺）</li>
+              <li><b>高たんぱく</b>（サラダチキン / ゆで卵 / ヨーグルト等）</li>
+              <li><b>プラス1</b>（乳製品 / スープ / 果物などで調整）</li>
+            </ul>
+          </div>
+
+          <div class="template-card">
+            <div class="template-head">
+              <div class="template-title">減量テンプレ</div>
+              <span class="pill">🔥 減量</span>
+            </div>
+            <ul class="template-list">
+              <li><b>かさ増し</b>（サラダ / 野菜 / 海藻）</li>
+              <li><b>高たんぱく</b>（鶏・魚・卵・大豆系）</li>
+              <li><b>汁物</b>（味噌汁 / スープで満足感UP）</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Seven onigiri examples -->
+        <div class="template-grid" style="margin-top:22px;">
+          <div class="template-card">
+            <div class="template-head">
+              <div class="template-title">セブン｜おにぎり増量（3セット）</div>
+              <span class="pill">🏋️‍♂️ 増量</span>
+            </div>
+            <ul class="template-list">
+              <li><b>セットA（基本）</b>：おにぎり×2 ＋ サラダチキン系 ＋ ヨーグルト/乳製品</li>
+              <li><b>セットB（時短）</b>：おにぎり×2 ＋ ゆで卵/卵系 ＋ バナナ等（食べやすい物）</li>
+              <li><b>セットC（しっかり）</b>：おにぎり×2 ＋ 魚/肉の高たんぱく惣菜 ＋ スープ</li>
+            </ul>
+            <p style="color:#5f6679;font-size:0.92rem;line-height:1.7;margin-top:10px;">
+              目安：<b>タンパク質20g↑</b>になる組み合わせを選ぶ（足りなければ「チキン/卵/ヨーグルト」を足す）
             </p>
-        </header>
+          </div>
 
-        <main class="main-content">
-            <div class="store-links" aria-label="アプリストアリンク">
-                <a class="badge-btn" href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener" aria-label="App Storeで入手">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-                </a>
-                <a class="badge-btn play" href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れよう">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
-                </a>
+          <div class="template-card">
+            <div class="template-head">
+              <div class="template-title">セブン｜おにぎり減量（3セット）</div>
+              <span class="pill">🔥 減量</span>
             </div>
+            <ul class="template-list">
+              <li><b>セットA（夜向け）</b>：おにぎり×1 ＋ サラダ（かさ増し） ＋ サラダチキン系</li>
+              <li><b>セットB（満足）</b>：おにぎり×1 ＋ 魚/肉の高たんぱく惣菜 ＋ 味噌汁/スープ</li>
+              <li><b>セットC（軽め）</b>：おにぎり×1 ＋ ゆで卵/豆腐系 ＋ スープ</li>
+            </ul>
+            <p style="color:#5f6679;font-size:0.92rem;line-height:1.7;margin-top:10px;">
+              コツ：<b>脂質が多そうな惣菜は避ける</b> → 「鶏/魚/卵/大豆」を優先
+            </p>
+          </div>
+        </div>
 
-            <!-- New: Convenience templates section -->
-            <section class="template-section" aria-labelledby="templates">
-                <h2 id="templates" class="section-title">コンビニ飯テンプレ（保存用）</h2>
-                <p class="section-subtitle">
-                    まずは<b>「主食＋高たんぱく＋プラス1」</b>（増量）か、<b>「かさ増し＋高たんぱく＋汁物」</b>（減量）だけ覚えればOK。<br>
-                    ※商品は日々変わるので、栄養成分表示で<b>目安</b>として調整してください。
-                </p>
+        <p class="template-note">
+          投稿は「セブン → ファミマ → ローソン」の順で更新中。動画のコメントで <b>「増量」</b> / <b>「減量」</b> と送ってくれたら別パターンも作ります。
+        </p>
 
-                <div class="template-grid">
-                    <div class="template-card">
-                        <div class="template-head">
-                            <div class="template-title">増量テンプレ</div>
-                            <span class="pill">🏋️‍♂️ 増量</span>
-                        </div>
-                        <ul class="template-list">
-                            <li><b>主食</b>（おにぎり / パン / 麺）</li>
-                            <li><b>高たんぱく</b>（サラダチキン / ゆで卵 / ヨーグルト等）</li>
-                            <li><b>プラス1</b>（乳製品 / スープ / 果物などで調整）</li>
-                        </ul>
-                    </div>
+        <div class="template-actions" aria-label="ショートカット">
+          <a class="mini-action" href="#features">アプリでできること</a>
+          <a class="mini-action" href="#release">最新アップデート</a>
+        </div>
 
-                    <div class="template-card">
-                        <div class="template-head">
-                            <div class="template-title">減量テンプレ</div>
-                            <span class="pill">🔥 減量</span>
-                        </div>
-                        <ul class="template-list">
-                            <li><b>かさ増し</b>（サラダ / 野菜 / 海藻）</li>
-                            <li><b>高たんぱく</b>（鶏・魚・卵・大豆系）</li>
-                            <li><b>汁物</b>（味噌汁 / スープで満足感UP）</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Store buttons (shortcut) -->
+        <div class="store-links" aria-label="アプリストアリンク（ショートカット）" style="margin: 22px 0 0;">
+          <a class="badge-btn"
+             href="https://apps.apple.com/app/calorie-note-ver2/id6751843157"
+             target="_blank" rel="noopener"
+             aria-label="App Storeで入手（ショートカット）">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+          </a>
 
-                <p class="template-note">
-                    投稿は「セブン → ファミマ → ローソン」の順で更新中。動画のコメントで <b>「増量」</b> / <b>「減量」</b> と送ってくれたら別パターンも作ります。
-                </p>
+          <a class="badge-btn play"
+             href="https://play.google.com/store/apps/details?id=com.calorienote.app"
+             target="_blank" rel="noopener"
+             aria-label="Google Playで手に入れよう（ショートカット）">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </section>
 
-                <div class="template-actions" aria-label="ショートカット">
-                    <a class="mini-action" href="#features">アプリでできること</a>
-                    <a class="mini-action" href="#release">最新アップデート</a>
-                </div>
+      <!-- Features -->
+      <section aria-labelledby="features">
+        <h2 id="features" class="section-title">アプリでできること</h2>
+        <p class="section-subtitle">
+          「テンプレで決める」→「アプリで秒速記録」→「続ける」。まずは<b>入力の手間を減らす</b>ことにフォーカスしています。
+        </p>
 
-                <!-- ここにストアリンクをもう一回置く（迷わせない） -->
-                <div class="store-links" aria-label="アプリストアリンク（ショートカット）" style="margin: 22px 0 0;">
-                    <a class="badge-btn" href="https://apps.apple.com/app/calorie-note-ver2/id6751843157" target="_blank" rel="noopener" aria-label="App Storeで入手（ショートカット）">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-                    </a>
-                    <a class="badge-btn play" href="https://play.google.com/store/apps/details?id=com.calorienote.app" target="_blank" rel="noopener" aria-label="Google Playで手に入れよう（ショートカット）">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
-                    </a>
-                </div>
-            </section>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🛒</div>
+            <h3>テンプレで迷わない</h3>
+            <p>増量/減量の「買う物3つ」ルールで、コンビニでも選択がブレにくい。お気に入り化して繰り返し使えます。</p>
+          </div>
 
-            <section aria-labelledby="features">
-                <h2 id="features" class="section-title">アプリでできること</h2>
-                <p class="section-subtitle">
-                    「テンプレで決める」→「アプリで秒速記録」→「続ける」。まずは<b>入力の手間を減らす</b>ことにフォーカスしています。
-                </p>
+          <div class="feature">
+            <div class="feature-icon">🍽️</div>
+            <h3>食事・PFC記録</h3>
+            <p>テンプレ・お気に入り・検索から素早く入力。タンパク質・脂質・炭水化物のバランスや日/週の傾向も可視化します。</p>
+          </div>
 
-                <div class="features">
-                    <div class="feature">
-                        <div class="feature-icon">🛒</div>
-                        <h3>テンプレで迷わない</h3>
-                        <p>増量/減量の「買う物3つ」ルールで、コンビニでも選択がブレにくい。お気に入り化して繰り返し使えます。</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🍽️</div>
-                        <h3>食事・PFC記録</h3>
-                        <p>テンプレ・お気に入り・検索から素早く入力。タンパク質・脂質・炭水化物のバランスや日/週の傾向も可視化します。</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">⚖️</div>
-                        <h3>目標（増量/減量）に合わせて調整</h3>
-                        <p>日ごとのカロリー目標を柔軟に設定。増量/減量のフェーズ切り替えもしやすく、継続のハードルを下げます。</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">📊</div>
-                        <h3>データ可視化</h3>
-                        <p>残カロリー、PFC比率、週間サマリーを固定表示。データエクスポート（CSV/Excel）にも対応しています。</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🏃‍♂️</div>
-                        <h3>運動記録と消費管理</h3>
-                        <p>消費カロリーを食事データと統合。残り摂取可能カロリーが負値になった場合は目立つ警告でお知らせします。</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>データの安心運用</h3>
-                        <p>ローカル保存＋手動エクスポートで安心。ログ出力も抑制し、プライバシーに配慮しています。</p>
-                    </div>
-                </div>
-            </section>
+          <div class="feature">
+            <div class="feature-icon">⚖️</div>
+            <h3>目標（増量/減量）に合わせて調整</h3>
+            <p>日ごとのカロリー目標を柔軟に設定。増量/減量のフェーズ切り替えもしやすく、継続のハードルを下げます。</p>
+          </div>
 
-            <section class="watch-section" aria-labelledby="watch">
-                <div class="watch-grid">
-                    <div class="watch-text">
-                        <h3 id="watch">Apple Watch で残カロリーを手首チェック（＋α）</h3>
-                        <p>watchOS コンパニオンアプリとコンプリケーションを組み合わせれば、iPhone を取り出さずに最新のカロリー状況を確認できます。</p>
-                        <ul>
-                            <li>摂取・目標・消費・残り摂取可能カロリーをウォッチフェイスに表示</li>
-                            <li>Modular Small / Graphic Circular / Graphic Rectangular の各コンプリケーションに対応</li>
-                            <li>WatchConnectivity によるリアルタイム同期でデータのズレを防止</li>
-                        </ul>
-                    </div>
-                    <div class="watch-images">
-                        <div class="watch-image">
-                            <img src="watch_series9_01.png" alt="Calorie Note watchOS メイン画面のスクリーンショット">
-                        </div>
-                        <div class="watch-image">
-                            <img src="watch_series9_02.png" alt="Calorie Note watchOS コンプリケーションのスクリーンショット">
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h3>データ可視化</h3>
+            <p>残カロリー、PFC比率、週間サマリーを固定表示。データエクスポート（CSV/Excel）にも対応しています。</p>
+          </div>
 
-            <section class="release-notes" aria-labelledby="release">
-                <h2 id="release" class="section-title">最新アップデート（v1.3.8 / 75）</h2>
-                <div class="release-note-item">Apple Watch 対応とコンプリケーションの実装により、残カロリーを手首で確認可能になりました。</div>
-                <div class="release-note-item">watchOS 用アイコン・Info.plist を整備し、App Store 配信時のエラーを解消。</div>
-                <div class="release-note-item">WatchConnectivity の同期処理とスナップショット保存を安定化。</div>
+          <div class="feature">
+            <div class="feature-icon">🏃‍♂️</div>
+            <h3>運動記録と消費管理</h3>
+            <p>消費カロリーを食事データと統合。残り摂取可能カロリーが負値になった場合は目立つ警告でお知らせします。</p>
+          </div>
 
-                <div class="release-actions">
-                    <a href="https://krevive1.github.io/calorie-note-updates/version/latest-version.json"
-                       target="_blank" rel="noopener">
-                       最新バージョン JSON
-                    </a>
-                </div>
-            </section>
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>データの安心運用</h3>
+            <p>ローカル保存＋手動エクスポートで安心。ログ出力も抑制し、プライバシーに配慮しています。</p>
+          </div>
+        </div>
+      </section>
 
-            <section class="social-section">
-                <h2 class="section-title">コンビニ飯テンプレを毎日更新</h2>
-                <p>セブン→ファミマ→ローソンの順で、増量/減量の「買う物3つ」を投稿しています。フォローして保存用にどうぞ！</p>
-                <div class="social-links">
-                    <a href="https://twitter.com/tanakat69362741" target="_blank" rel="noopener" class="social-link twitter" aria-label="X（Twitter）をフォロー">
-                        🐦 <span>X（Twitter）</span>
-                    </a>
-                    <a href="https://www.instagram.com/calorie_note_dev/" target="_blank" rel="noopener" class="social-link instagram" aria-label="Instagramをフォロー">
-                        📷 <span>Instagram</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@calorie_note" target="_blank" rel="noopener" class="social-link tiktok" aria-label="TikTokをフォロー">
-                        🎵 <span>TikTok</span>
-                    </a>
-                </div>
-            </section>
+      <!-- Watch -->
+      <section class="watch-section" aria-labelledby="watch">
+        <div class="watch-grid">
+          <div class="watch-text">
+            <h3 id="watch">Apple Watch で残カロリーを手首チェック（＋α）</h3>
+            <p>watchOS コンパニオンアプリとコンプリケーションを組み合わせれば、iPhone を取り出さずに最新のカロリー状況を確認できます。</p>
+            <ul>
+              <li>摂取・目標・消費・残り摂取可能カロリーをウォッチフェイスに表示</li>
+              <li>Modular Small / Graphic Circular / Graphic Rectangular の各コンプリケーションに対応</li>
+              <li>WatchConnectivity によるリアルタイム同期でデータのズレを防止</li>
+            </ul>
+          </div>
 
-            <section class="links-section" aria-label="各種リンク">
-                <div class="link-card">
-                    <h3>プライバシーポリシー</h3>
-                    <a href="https://krevive1.github.io/calorienote-privacy/" target="_blank" rel="noopener">プライバシーポリシーを確認</a>
-                </div>
-                <div class="link-card">
-                    <h3>プレスリリース</h3>
-                    <a href="https://krevive1.github.io/calorie-note-site/PRESS_RELEASE.html" target="_blank" rel="noopener">プレスリリースを読む</a>
-                </div>
-                <div class="link-card">
-                    <h3>お問い合わせ</h3>
-                    <a href="mailto:qgsky21777@gmail.com" aria-label="メールでお問い合わせ">qgsky21777@gmail.com</a>
-                </div>
-            </section>
-        </main>
+          <div class="watch-images">
+            <div class="watch-image">
+              <img src="watch_series9_01.png" alt="Calorie Note watchOS メイン画面のスクリーンショット" />
+            </div>
+            <div class="watch-image">
+              <img src="watch_series9_02.png" alt="Calorie Note watchOS コンプリケーションのスクリーンショット" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer class="footer">
-            <p>&copy; 2024–2025 Calorie Note. All rights reserved.</p>
-        </footer>
-    </div>
+      <!-- Release notes -->
+      <section class="release-notes" aria-labelledby="release">
+        <h2 id="release" class="section-title">最新アップデート（v1.3.8 / 75）</h2>
+        <div class="release-note-item">Apple Watch 対応とコンプリケーションの実装により、残カロリーを手首で確認可能になりました。</div>
+        <div class="release-note-item">watchOS 用アイコン・Info.plist を整備し、App Store 配信時のエラーを解消。</div>
+        <div class="release-note-item">WatchConnectivity の同期処理とスナップショット保存を安定化。</div>
+
+        <div class="release-actions">
+          <a href="https://krevive1.github.io/calorie-note-updates/version/latest-version.json"
+             target="_blank" rel="noopener">
+            最新バージョン JSON
+          </a>
+        </div>
+      </section>
+
+      <!-- Social -->
+      <section class="social-section">
+        <h2 class="section-title">コンビニ飯テンプレを毎日更新</h2>
+        <p>セブン→ファミマ→ローソンの順で、増量/減量の「買う物3つ」を投稿しています。フォローして保存用にどうぞ！</p>
+
+        <div class="social-links">
+          <a href="https://twitter.com/tanakat69362741"
+             target="_blank" rel="noopener"
+             class="social-link twitter" aria-label="X（Twitter）をフォロー">
+            🐦 <span>X（Twitter）</span>
+          </a>
+
+          <a href="https://www.instagram.com/calorie_note_dev/"
+             target="_blank" rel="noopener"
+             class="social-link instagram" aria-label="Instagramをフォロー">
+            📷 <span>Instagram</span>
+          </a>
+
+          <a href="https://www.tiktok.com/@calorie_note"
+             target="_blank" rel="noopener"
+             class="social-link tiktok" aria-label="TikTokをフォロー">
+            🎵 <span>TikTok</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section class="links-section" aria-label="各種リンク">
+        <div class="link-card">
+          <h3>プライバシーポリシー</h3>
+          <a href="https://krevive1.github.io/calorienote-privacy/" target="_blank" rel="noopener">プライバシーポリシーを確認</a>
+        </div>
+
+        <div class="link-card">
+          <h3>プレスリリース</h3>
+          <a href="https://krevive1.github.io/calorie-note-site/PRESS_RELEASE.html" target="_blank" rel="noopener">プレスリリースを読む</a>
+        </div>
+
+        <div class="link-card">
+          <h3>お問い合わせ</h3>
+          <a href="mailto:qgsky21777@gmail.com" aria-label="メールでお問い合わせ">qgsky21777@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024–2025 Calorie Note. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
